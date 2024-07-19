@@ -4,16 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
     const subTabs = document.querySelectorAll('.sub-tab');
     const buttonSound = document.getElementById('button-sound');
-    const startingSound = document.getElementById('starting-sound');
     const errorSound = document.getElementById('error-sound');
     const grantedSound = document.getElementById('granted-sound');
     const accessKeyInput = document.getElementById('access-key-input');
     const submitKeyButton = document.getElementById('submit-key');
     const accessStatus = document.getElementById('access-status');
     const accessContent = document.getElementById('access-content');
-
-    startingSound.play();
-
     setTimeout(() => {
         loadingScreen.style.display = 'none';
         mainContent.style.display = 'block';
