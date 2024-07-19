@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen">
+        <pre>>Loading main_</pre>
+    </div>
+    <div id="main-content" style="display:none;">
+        <div class="tabs">
+            <span class="tab active" data-tab="home">HOME</span>
+            <span class="tab" data-tab="projects">PROJECTS</span>
+            <span class="tab" data-tab="about">ABOUT</span>
+        </div>
+        <div id="home" class="tab-content active">
+            <h2>Последний проект: YANDEXDEFENDER</h2>
+        </div>
+        <div id="projects" class="tab-content">
+            <div class="sub-tabs">
+                <span class="sub-tab active" data-tab="main">MAIN</span>
+                <span class="sub-tab" data-tab="nedohackers">NEDOHACKERS</span>
+            </div>
+            <div id="main" class="sub-tab-content active">
+                <ul>
+                    <li>Likuur`s Multitool <button onclick="window.location.href='https://disk.yandex.ru/d/J4D8alXnM7sRzQ'">Download</button></li>
+                    <li>Window Viewer [In progress...]</li>
+                    <li>Totox VM [In progress...]</li>
+                    <li>Lixmy Studio [In progress...]</li>
+                    <li>LikyLibr [In progress...]</li>
+                    <li>Randomizer [In progress...]</li>
+                </ul>
+                <h3>---MALWARE---</h3>
+                <ul>
+                    <li>MrsMajor 3.0 Working <button onclick="window.location.href='https://disk.yandex.ru/d/xzjqvE6sMJhJ9g'">Download</button> <button onclick="window.location.href='https://github.com/Likuur/Mrs-Major-3.0-Dropper'">Source</button></li>
+                    <li>MrsMajor 4.0 [Unsupported]</li>
+                    <li>MrsMajor 5.0 <button onclick="window.location.href='https://disk.yandex.ru/d/V3kzb9P9K6YJXA'">Download</button></li>
+                    <li>Solantris <button onclick="window.location.href='https://disk.yandex.ru/d/GzknVharj47m6Q'">Download</button></li>
+                    <li>Jerfency Dunce <button onclick="window.location.href='https://disk.yandex.ru/d/08Fz6A_smmhQjw'">Download</button></li>
+                </ul>
+            </div>
+            <div id="nedohackers" class="sub-tab-content">
+                <h3>Проверка на недохакера</h3>
+                <div class="access-key-input-container">
+                    <input type="text" id="access-key-input" placeholder="Введите ключ доступа">
+                    <button id="submit-key">Submit</button>
+                </div>
+                <div id="access-status"></div>
+                <div id="access-content" style="display:none;">
+                    <div class="panel left-panel">
+                        <h3>kernelTeam</h3>
+                        <ul>
+                            <li>YandexDefender [In progress...]</li>
+                            <li>QLauncher <button onclick="window.location.href='https://disk.yandex.ru/d/mD5lycGNSMgzaA'">Download</button></li>
+                            <li>Lintivirus [In progress...]</li>
+                        </ul>
+                    </div>
+                    <div class="panel right-panel">
+                        <h3>user32Team</h3>
+                        <p style="color: gray;">Пока нет проектов...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="tab-content">
+            <p>LCC (Likuur Code Comutiny) - команда по производству различного ПО для операционной системы Windows (скоро для Mac и Android). Участники:</p>
+            <div class="sub-tabs">
+                <span class="sub-tab active" data-tab="terfas13">TERFAS13</span>
+                <span class="sub-tab" data-tab="zontikonelove">ZONTIKONELOVE</span>
+                <span class="sub-tab" data-tab="likuur">LIKUUR</span>
+            </div>
+            <div id="terfas13" class="sub-tab-content active">
+                <p>Занимается идеями.<br>Помог в проектах: Restart, Lintivirus, YandexDefender.</p>
+            </div>
+            <div id="zontikonelove" class="sub-tab-content">
+                <p>Занимается дизайном.<br>Помог в проектах: YandexDefender.</p>
+            </div>
+            <div id="likuur" class="sub-tab-content">
+                <p>Основатель команды, программист.<br>Создал проекты: MrsMajor 3.0 Working, MrsMajor 4.0, MrsMajor 5.0, Solantris, YandexDefender, Lintivirus, QLauncher, Restart, Likuur`s Multitool, Jerfency Dunce, Lixmy Studio, LikyLibr, Randomizer, Window Viewer.</p>
+            </div>
+        </div>
+    </div>
+    <audio id="button-sound" src="button.mp3"></audio>
+    <audio id="starting-sound" src="starting.mp3"></audio>
+    <audio id="error-sound" src="error.mp3"></audio>
+    <audio id="granted-sound" src="granted.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
