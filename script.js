@@ -10,14 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitKeyButton = document.getElementById('submit-key');
     const accessStatus = document.getElementById('access-status');
     const accessContent = document.getElementById('access-content');
-    const salinewinButton = document.getElementById('salinewin-web-button');
-    const gdiEffect = document.getElementById('gdi-effect');
-
-    setTimeout(() => {
-        loadingScreen.style.display = 'none';
-        mainContent.style.display = 'block';
-    }, 3000);
-
+    
+    loadingScreen.style.display = 'none';
+    mainContent.style.display = 'block';
+    
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             buttonSound.play();
