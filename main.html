@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="main-content" style="display:none;">
+    <div id="main-content">
         <div class="tabs">
             <span class="tab active" data-tab="home">HOME</span>
             <span class="tab" data-tab="projects">PROJECTS</span>
@@ -48,17 +48,19 @@
                 </div>
                 <div id="access-status"></div>
                 <div id="access-content" style="display:none;">
-                    <div class="panel left-panel">
-                        <h3>kernelTeam</h3>
+                    <div class="sub-tabs">
+                        <span class="sub-tab active" data-tab="kernelTeam">kernelTeam</span>
+                        <span class="sub-tab" data-tab="user32Team">user32Team</span>
+                    </div>
+                    <div id="kernelTeam" class="sub-tab-content active">
                         <ul>
                             <li>YandexDefender [In progress...]</li>
                             <li>QLauncher <button onclick="window.location.href='https://disk.yandex.ru/d/mD5lycGNSMgzaA'">Download</button></li>
                             <li>Lintivirus [In progress...]</li>
                         </ul>
                     </div>
-                    <div class="panel right-panel">
-                        <h3>user32Team</h3>
-                        <p style="color: gray;">Пока нет проектов...</p>
+                    <div id="user32Team" class="sub-tab-content">
+                        <p>Пока нет проектов...</p>
                     </div>
                 </div>
             </div>
@@ -82,6 +84,7 @@
         </div>
     </div>
     <audio id="button-sound" src="button.mp3"></audio>
+    <audio id="starting-sound" src="starting.mp3"></audio>
     <audio id="error-sound" src="error.mp3"></audio>
     <audio id="granted-sound" src="granted.mp3"></audio>
     <script src="script.js"></script>
