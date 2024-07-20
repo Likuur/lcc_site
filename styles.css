@@ -6,18 +6,9 @@ body {
     padding: 0;
 }
 
-#loading-screen {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-}
-
 #main-content {
     padding: 20px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .tabs, .sub-tabs {
@@ -55,37 +46,6 @@ body {
 .tab-content.active, .sub-tab-content.active {
     display: block;
     opacity: 1;
-}
-
-.panel {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 8px;
-    position: absolute;
-    width: 40%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.panel:hover {
-    background-color: #333;
-    transform: scale(1.05);
-}
-
-.left-panel {
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.right-panel {
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.right-panel {
-    left: 50%;
-    top:  47%;
 }
 
 a {
@@ -128,9 +88,6 @@ a:hover {
     background-color: #00ff00;
     color: black;
     transform: scale(1.1);
-}
-.hidden {
-    display: none;
 }
 
 button {
