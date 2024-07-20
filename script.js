@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const loadingScreen = document.getElementById('loading-screen');
     const mainContent = document.getElementById('main-content');
     const tabs = document.querySelectorAll('.tab');
     const subTabs = document.querySelectorAll('.sub-tab');
@@ -10,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitKeyButton = document.getElementById('submit-key');
     const accessStatus = document.getElementById('access-status');
     const accessContent = document.getElementById('access-content');
-    
-    loadingScreen.style.display = 'none';
-    mainContent.style.display = 'block';
     
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
