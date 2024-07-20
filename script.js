@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitKeyButton = document.getElementById('submit-key');
     const accessStatus = document.getElementById('access-status');
     const accessContent = document.getElementById('access-content');
-    
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             buttonSound.play();
