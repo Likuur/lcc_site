@@ -129,6 +129,40 @@ a:hover {
     color: black;
     transform: scale(1.1);
 }
+.hidden {
+    display: none;
+}
+
+#gdi-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 9999;
+    animation: gdi-flash 1s infinite;
+}
+
+@keyframes gdi-flash {
+    0% {
+        background: rgba(255, 0, 0, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        background: rgba(255, 0, 0, 0.7);
+        transform: scale(1.1);
+    }
+    100% {
+        background: rgba(255, 0, 0, 0.2);
+        transform: scale(1);
+    }
+}
+
+#gdi-effect.hidden {
+    display: none;
+}
 
 button {
     padding: 10px 20px;
