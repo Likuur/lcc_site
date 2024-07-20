@@ -55,11 +55,4 @@ document.addEventListener('DOMContentLoaded', function () {
             accessContent.style.display = 'none';
         }
     });
-
-    salinewinButton.addEventListener('click', () => {
-        gdiEffect.classList.toggle('hidden');
-        setTimeout(() => {
-            gdiEffect.classList.add('hidden');
-        }, 3000); // Скрываем эффект через 3 секунды
-    });
 });
