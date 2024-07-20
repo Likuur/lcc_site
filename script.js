@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
     const subTabs = document.querySelectorAll('.sub-tab');
     const buttonSound = document.getElementById('button-sound');
-    const startingSound = document.getElementById('starting-sound');
     const errorSound = document.getElementById('error-sound');
     const grantedSound = document.getElementById('granted-sound');
     const accessKeyInput = document.getElementById('access-key-input');
@@ -13,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const accessContent = document.getElementById('access-content');
     const salinewinButton = document.getElementById('salinewin-web-button');
     const gdiEffect = document.getElementById('gdi-effect');
-
-    startingSound.play();
 
     setTimeout(() => {
         loadingScreen.style.display = 'none';
