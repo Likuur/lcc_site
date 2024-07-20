@@ -110,3 +110,49 @@ button:hover {
 #access-status {
     text-align: center;
 }
+
+#nedohackers h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.panel {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border: 2px solid #444;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.no-projects-text {
+    color: gray;
+    font-style: italic;
+}
+.panel:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.panel.active {
+    background-color: #444;
+}
+
+.panel-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.panel-content.active {
+    display: block;
+    opacity: 1;
+}
