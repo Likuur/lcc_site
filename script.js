@@ -18,8 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
             tab.classList.add('active');
             document.querySelector('.tab-content.active').classList.remove('active');
             document.getElementById(tab.dataset.tab).classList.add('active');
+
+            const subTabsContainer = document.querySelector(`#${tab.dataset.tab} .sub-tabs`);
+            if (subTabsContainer) {
+                const activeSubTab = subTabsContainer.querySelector('.sub-tab.active');
+                if (activeSubTab) {
+                    activeSubTab.classList.remove('active');
+                }
+                const firstSubTab = subTabsContainer.querySelector('.sub-tab');
+                if (firstSubTab) {
+                    firstSubTab.classList.add('active');
+                    const firstSubTabContent = document.querySelector(`#${firstSubTab.dataset.tab}`);
+                    if (firstSubTabContent) {
+                        firstSubTabContent.classList.add('active');
+                    }
+                }
+            }
         });
     });
+
     subTabs.forEach(subTab => {
         subTab.addEventListener('click', () => {
             buttonSound.play();
@@ -30,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             parent.querySelector(`#${subTab.dataset.tab}`).classList.add('active');
         });
     });
+
     panels.forEach(panel => {
         panel.addEventListener('click', () => {
             buttonSound.play();
@@ -39,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById(panel.dataset.panel).classList.add('active');
         });
     });
+
     submitKeyButton.addEventListener('click', () => {
         if (accessKeyInput.value === 'VanyAAc19506esSGranteD') {
             grantedSound.play();
