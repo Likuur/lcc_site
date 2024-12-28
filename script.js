@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.tab-content.active').classList.remove('active');
             document.getElementById(tab.dataset.tab).classList.add('active');
 
+            // Проверка на наличие подтабов
             const subTabsContainer = document.querySelector(`#${tab.dataset.tab} .sub-tabs`);
             if (subTabsContainer) {
                 const activeSubTab = subTabsContainer.querySelector('.sub-tab.active');
@@ -41,7 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
         subTab.addEventListener('click', () => {
             buttonSound.play();
             const parent = subTab.closest('.tab-content');
-            parent.querySelector('.sub-tab.active').classList.remove('active');
+            const activeSubTab = parent.querySelector('.sub-tab.active');
+            if (activeSubTab) {
+                activeSubTab.classList.remove('active');
+            }
             subTab.classList.add('active');
             parent.querySelector('.sub-tab-content.active').classList.remove('active');
             parent.querySelector(`#${subTab.dataset.tab}`).classList.add('active');
