@@ -8,6 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loading-screen">
+        <h1>Launching LiDos...</h1>
+        <div id="loading-messages"></div> <!-- Для отображения сообщений -->
+        <div id="captcha-container" style="display: none;">
+            <p>Enter captcha:</p>
+            <p>1 + 4 = <input type="text" id="captcha-input" /></p>
+        </div>
+    </div>
     <div id="main-content">
         <div class="tabs">
             <span class="tab active" data-tab="home">HOME</span>
@@ -53,7 +61,7 @@
             <div id="nedohackers" class="sub-tab-content">
                 <h3>Проверка на недохакера</h3>
                 <div class="access-key-input-container">
-                    <input type="text" id="access-key-input" placeholder="Введите ключ доступа">
+                    <input type="password" id="access-key-input" placeholder="Введите ключ доступа">
                     <button id="submit-key">Submit</button>
                 </div>
                 <div id="access-status"></div>
