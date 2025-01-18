@@ -6,6 +6,51 @@ body {
     padding: 0;
 }
 
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #00ff00;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание по левому краю */
+    padding: 20px; /* Отступы от краев */
+    font-family: 'Press Start 2P', cursive;
+    z-index: 9999; /* Чтобы экран загрузки был поверх всего */
+}
+
+#loading-screen h1 {
+    font-size: 24px;
+    white-space: pre-wrap; /* Чтобы текст отображался корректно */
+    margin: 0; /* Убираем отступы */
+}
+
+#loading-messages {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#captcha-container {
+    margin-top: 20px;
+}
+
+#captcha-input {
+    background-color: black;
+    color: #00ff00;
+    border: none;
+    border-bottom: 1px solid #00ff00;
+    outline: none;
+    font-size: 18px;
+    width: 100px; /* Ширина поля ввода */
+}
+
+
+
 #main-content {
     padding: 20px;
     transition: opacity 0.3s ease-in-out;
