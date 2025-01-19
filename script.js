@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const subTabs = document.querySelectorAll('.sub-tab');
     const panels = document.querySelectorAll('.panel');
     const buttonSound = document.getElementById('button-sound');
-    const errorSound = document.getElementById('error-sound');
-    const grantedSound = document.getElementById('granted-sound');
-    const accessKeyInput = document.getElementById('access-key-input');
-    const submitKeyButton = document.getElementById('submit-key');
-    const accessStatus = document.getElementById('access-status');
-    const accessContent = document.getElementById('access-content');
     const loadingMessages = document.getElementById('loading-messages');
     const captchaContainer = document.getElementById('captcha-container');
     const captchaInput = document.getElementById('captcha-input');
@@ -41,10 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
         await showMessage("Establishing Database Connection... SUCCESS", 700);
         await showMessage("Preparing User Interface... READY", 800);
         await showMessage("Finalizing Setup... COMPLETE", 1000);
-        
-        // Показать капчу
+
         captchaContainer.style.display = 'block';
-        captchaInput.focus(); // Установить фокус на поле ввода
+        captchaInput.focus();
     }
 
     captchaInput.addEventListener('keypress', (event) => {
@@ -52,8 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
             if (captchaInput.value === '5') {
                 loadingMessages.innerHTML += `<p>Successful!</p>`;
                 setTimeout(() => {
-                    loadingScreen.style.display = 'none'; // Скрыть экран загрузки
-                    mainContent.style.display = 'block'; // Показать основной контент
+                    loadingScreen.style.display = 'none';
+                    mainContent.style.display = 'block';
                 }, 1000);
             } else {
                 loadingMessages.innerHTML += `<p style="color: red;">Failed!</p>`;
@@ -76,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.tab-content.active').classList.remove('active');
             document.getElementById(tab.dataset.tab).classList.add('active');
 
-            // Проверка на наличие подтабов
             const subTabsContainer = document.querySelector(`#${tab.dataset.tab} .sub-tabs`);
             if (subTabsContainer) {
                 const activeSubTab = subTabsContainer.querySelector('.sub-tab.active');
@@ -117,19 +109,5 @@ document.addEventListener('DOMContentLoaded', function () {
             panel.classList.add('active');
             document.getElementById(panel.dataset.panel).classList.add('active');
         });
-    });
-
-    submitKeyButton.addEventListener('click', () => {
-        if (accessKeyInput.value === 'VanyAAc19506esSGranteD') {
-            grantedSound.play();
-            accessStatus.style.color = 'green';
-            accessStatus.textContent = 'Доступ разрешен';
-            accessContent.style.display = 'block';
-        } else {
-            errorSound.play();
-            accessStatus.style.color = 'red';
-            accessStatus.textContent = 'Ошибка: ключ не найден';
-            accessContent.style.display = 'none';
-        }
     });
 });
