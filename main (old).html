@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen">
+        <h1>Launching LiDos...</h1>
+        <div id="loading-messages"></div> <!-- Для отображения сообщений -->
+        <div id="captcha-container" style="display: none;">
+            <p>Enter captcha:</p>
+            <p>1 + 4 = <input type="text" id="captcha-input" /></p>
+        </div>
+    </div>
+    <div id="main-content">
+        <div class="tabs">
+            <span class="tab active" data-tab="home">HOME</span>
+            <span class="tab" data-tab="projects">PROJECTS</span>
+            <span class="tab" data-tab="about">ABOUT</span>
+        </div>
+        <div id="home" class="tab-content active">
+            <h2>Последние действия:</h2>
+            <h2><pre>     Последний проект: SIMPLE ANTIVIRUS</pre></h2>
+            <h2><pre>     Потрачено времени: ≈ 60 часа (3600 минут)</pre></h2>
+            <h2><pre>     Запущено до финальной сборки: 48 раз</pre></h2>
+            <h2><pre>     Кол-во неудачных попыток написания вируса: 7</pre></h2>
+            <h2><pre>     Языки:</pre></h2>
+            <h2><pre>     C# (89%)</pre></h2>
+            <h2><pre>     C++ (11%)</pre></h2>
+            <h2><pre>     Дата релиза: 05.01.2025</pre></h2>
+            <h2><pre> </pre></h2>
+            <h2>Последние новости:</h2>
+            <h2><pre>    Вкладка "NEDOHACKERS" была удалена</pre></h2>
+        </div>
+        <div id="projects" class="tab-content">
+                 <ul>
+                    <li>Likuur`s Multitool <button onclick="window.location.href='https://raw.githubusercontent.com/Likuur/lcc_site/refs/heads/main/assets/Likuur%60s%20Multitool%20Installer.zip'">Download</button></li>
+                    <li>Window Viewer <button onclick="window.location.href='https://raw.githubusercontent.com/Likuur/lcc_site/refs/heads/main/assets/WindowViewer.exe'">Download</button> <button onclick="window.location.href='https://github.com/Likuur/WindowViewer'">Source</button></li>
+                    <li>Totox VM [In progress...]</li>
+                    <li>Lixmy Studio [In progress...]</li>
+                    <li>LikyLibr [In progress...]</li>
+                    <li>Randomizer [In progress...]</li>
+                    <li>CmlLib.Core.Installer.Forge DLL <button onclick="window.location.href='https://raw.githubusercontent.com/Likuur/lcc_site/refs/heads/main/assets/CmlLib.Core.Installer.Forge.dll'">Download</button></li>
+                    <li>GetIt Downloader <button onclick="window.location.href='https://raw.githubusercontent.com/Likuur/lcc_site/refs/heads/main/assets/GetIt%20Downloader.exe'">Download</button></li>
+                </ul>
+                <h3>---MALWARE---</h3>
+                <ul>
+                    <li>MrsMajor 3.0 Working <button onclick="window.location.href='https://disk.yandex.ru/d/xzjqvE6sMJhJ9g'">Download</button> <button onclick="window.location.href='https://github.com/Likuur/Mrs-Major-3.0-Dropper'">Source</button></li>
+                    <li>MrsMajor 4.0 [Unsupported]</li>
+                    <li>MrsMajor 5.0 <button onclick="window.location.href='https://disk.yandex.ru/d/N1g1eiuklgCHsQ'">Download</button></li>
+                    <li>Solantris <button onclick="window.location.href='https://disk.yandex.ru/d/GzknVharj47m6Q'">Download</button></li>
+                    <li>Jerfency Dunce <button onclick="window.location.href='https://disk.yandex.ru/d/08Fz6A_smmhQjw'">Download</button></li>
+                </ul>
+        </div>
+        <div id="about" class="tab-content">
+            <p>LCC (Likuur Code Community) - команда по производству различного ПО для операционной системы Windows (скоро для Mac и Android). Участники:</p>
+            <div class="sub-tabs">
+                <span class="sub-tab" data-tab="likuur">LIKUUR</span>
+                <span class="sub-tab" data-tab="wixtech">WIXTECH</span>
+                <span class="sub-tab" data-tab="prochack">PROCESS HACKER</span>
+                <span class="sub-tab" data-tab="up">UNNAMED PROGRAMIST</span>
+            </div>
+            <div id="likuur" class="sub-tab-content">
+                <p>Основатель команды, программист.<br>Создал проекты: MrsMajor 3.0 Working, MrsMajor 4.0, MrsMajor 5.0, Solantris, YandexDefender, Lintivirus, QLauncher, Restart, Likuur`s Multitool, Jerfency Dunce, Lixmy Studio, LikyLibr, Randomizer, Window Viewer.</p>
+            </div>
+            <div id="wixtech" class="sub-tab-content">
+                <p>Дизайнер. Помогает в проектах: Windows12, CreeperLauncher</p>
+            </div>
+            <div id="prochack" class="sub-tab-content">
+                <p>Обычный макс. Занимается дизайном и коддингом.</p>
+            </div>
+            <div id="up" class="sub-tab-content">
+                <p>КоДдИт</p>
+            </div>
+        </div>
+    </div>
+    <audio id="button-sound" src="button.mp3"></audio>
+    <audio id="starting-sound" src="starting.mp3"></audio>
+    <audio id="error-sound" src="error.mp3"></audio>
+    <audio id="granted-sound" src="granted.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
